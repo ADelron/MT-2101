@@ -42,6 +42,7 @@ body {
 }
 .back_button {
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 /*MAIN PAGE*/
@@ -55,6 +56,7 @@ body {
         align-items: stretch;
         flex-wrap: wrap;
         box-shadow: 0 0 10px rgba(0,0,32,0.2);
+        padding: 50px 0;
     }
     .text_content {
         margin-left: 5%;
@@ -78,19 +80,28 @@ body {
         width: 305px;
         cursor: pointer;
     }
+    .wid {
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .wid div {
+        max-width: 300px;
+        min-width: 300px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .wid div:hover {
+        opacity: 90%;
+    }
+    .a-text {
+        color: #000032;
+        text-decoration: none;
+        font-family: "Candara Light";
+    }
 
     .container1 .student-card .photo img {
         height: 400px;
         overflow: hidden;
-    }
-    .student-info {
-        background-color: white;
-        margin-right: 10%;
-        margin-left: 10%;
-        display: flex;
-        flex-direction: row;
-        box-shadow: 0 0 10px rgba(0,0,32,0.2);
-        padding-bottom: 40px;
     }
     .profile-photo {
         height: 300px;
@@ -245,6 +256,7 @@ body {
         align-items: center;
         justify-content: center;
     }
+
     .author_photo {
         height: 105px;
         width: 105px;
@@ -261,21 +273,78 @@ body {
         box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         border-radius: 10px 10px 10px 10px;
     }
-    .form-floating{
-        margin-left:4%;
-        font-family: "Candara Light";
-        font-size: 20px;
+    .container mt-5{
+        width: 50%;
+        height: 10vh;
+        margin-left: auto;
+        background: darkblue;
+        display: flex;
+        justify-content: center;
     }
+    form{
+        background: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        padding: 4vw 4vw;
+        width: 70%;
+        max-width: 900px;
+        border-radius: 10px;
+    }
+    form h4{
+        font-family: "Candara";
+        color: #000042;
+        font-weight: 800;
+        margin-bottom:20px;
+    }
+    form input, form textarea{
+        border: 0;
+        margin: 10px 0;
+        padding: 20px;
+        outline: none;
+        background: white;
+        font-size: 16px;
+    }
+    form button{
+        padding: 15px;
+        background: darkblue;
+        color: white;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        width: 150px;
+        margin: 20px auto 0;
+        border-radius: 10%;
+    }
+
+
+
     .logo {
-        width: 50px;
+        width: 8vw;
         border-radius: 50%;
-        margin-right: 30px;
         margin-left: 20px;
     }
     .navbar-light .navbar-nav .nav-link {
         color: #000032;
         font-family: "Century Gothic";
-        font-size: 30px;
+        font-size: 5vw;
+        margin-left: 20px;
+    }
+    .info h1 {
+        font-size: 40px;
+    }
+    @media (min-width: 990px){
+        .info h1 {
+            font-size: 3vw;
+        }
+    }
+    @media (min-width: 600px){
+        .navbar-light .navbar-nav .nav-link {
+            font-size: 30px;
+        }
+        .logo {
+            width: 50px;
+        }
     }
     .navbar-light .navbar-toggler {
         color: #000032;
@@ -285,5 +354,11 @@ body {
     .btn {
         color: #fff;
         background-color: #000032;
+    }
+    .info {
+        background-color: white;
+        margin-right: 10%;
+        margin-left: 10%;
+        box-shadow: 0 0 10px rgba(0,0,32,0.2);
     }
 }

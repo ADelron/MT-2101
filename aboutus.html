@@ -7,9 +7,9 @@
     <title>About Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
+
 <div class="header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <a href="#" class="navbar-left"><img src="images/logo.jpg" class="logo"></a>
@@ -31,6 +31,7 @@
         </div>
     </nav>
 </div>
+
 <div class="text_content">
     <h1> MT-2101 </h1>
     <p>Приветсвуем тебя на сайте МТ-2101! <br>
@@ -51,8 +52,34 @@
         six guys, which is kind of unusual for the IT University groups.<br>
         We decided to create a website that would give us a chance to learn more about each of us, because it’s cool to have something to do with your groupmates.</p>
 </div>
-
-
+<div class="container mt-5">
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <h4>Leave your feedback :)</h4>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your comment"></textarea>
+        <button type="submit" class="btn btn-primary">Send</button>
+</form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "mtlead2101@gmail.com",
+            Password : "mediatech2101",
+            To : 'assteroid22@gmail.com',
+            From : document.getElementById("name").value,
+            Subject : "new Form",
+            Body : document.getElementById("name").value
+                + "<br> email: " + document.getElementById("email").value
+                + "<br> message: " + document.getElementById("message").value
+        }).then(
+            message => alert ("Your Message Sent")
+        );
+    }
+</script>
 <div class="text_content">
     <p class="display-6 mt-5"> Web-cite creators : </p>
     <div class="location">  <img src="images/jafar.jpg" class="author_photo">
@@ -62,7 +89,7 @@
     </div>
 
     <br>
-    <div class="location">   <img src="images/askhat.jpg" class="author_photo">
+    <div class="location">   <img scr="images/askhat.jpg"  class="author_photo">
         <p> Askhat Dzhakupov <br>
             telegram :<a href="https://t.me/FelixDzerzhinsky">@FelixDzerzhinsky</a>
         </p>
